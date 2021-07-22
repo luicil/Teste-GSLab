@@ -28,7 +28,15 @@ namespace ProdutoAPI
         public void ConfigureServices(IServiceCollection services)
         {
 
+
+            var host = Configuration["DBHOST"] ?? "localhost";
+            var port = Configuration["DBPORT"] ?? "3306";
+            var user = Configuration["DBUSER"] ?? "root";
+            var password = Configuration["DBPASSWORD"] ?? "root1234";
             var connection = Configuration["ConexaoMySql:MySqlConnectionString"];
+
+            connection = $"Server={host};Port={port};Uid={user};Pwd={password};" + connection;
+
             services.AddDbContext<ProdutoContexto>(op => op.UseMySql(connection, ServerVersion.AutoDetect(connection)));
 
             services.AddMvc();

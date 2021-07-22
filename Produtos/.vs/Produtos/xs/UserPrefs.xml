@@ -5,7 +5,9 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Produtos" expanded="True">
-            <Node name="ProdutoAPI" expanded="True" selected="True" />
+            <Node name="ProdutoAPI" expanded="True" selected="True">
+              <Node name="Properties" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
