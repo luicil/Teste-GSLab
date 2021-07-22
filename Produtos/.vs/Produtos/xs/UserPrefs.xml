@@ -1,12 +1,14 @@
 ﻿<Properties StartupConfiguration="{FC39D6A3-F0F4-49A7-8500-A330F6F7530E}|Default">
-  <MonoDevelop.Ide.ItemProperties.ProdutosFE PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Produtos" expanded="True">
-            <Node name="ProdutoAPI" expanded="True" selected="True">
-              <Node name="Properties" expanded="True" />
+            <Node name="ProdutosFE" expanded="True" selected="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="NEProduto.cshtml" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -17,7 +19,10 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Volumes/Macintosh HD 2/Projetos/Teste_GSLab/Produtos/ProdutosFE/Controllers/NEProdutoController.cs" relfile="ProdutosFE/Controllers/NEProdutoController.cs" line="21" column="1" />
+      <Breakpoint file="/Volumes/Macintosh HD 2/Projetos/Teste_GSLab/Produtos/ProdutosFE/Controllers/NEProdutoController.cs" relfile="ProdutosFE/Controllers/NEProdutoController.cs" line="16" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
   <AuthorInfo Name="Luicil Fernandes" Email="luicilfernandes@hotmail.com" Copyright="(C) Luicil Fernandes" Company="Teste C# Full Stack Developer" Trademark="GS Lab" />
