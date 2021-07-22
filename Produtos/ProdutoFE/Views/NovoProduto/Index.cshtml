@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <div class="text-center">
+                <h1 class="display-4">Novo Produto</h1>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="container-fluid">
+                <form method="post" asp-controller="NovoProduto" asp-action="Salvar">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Nome do Produto:</label>
+                        <input type="text" name="nomeproduto" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Descrição do Produto:</label>
+                        <input type="text" name="descproduto" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Valor do Produto:</label>
+                        <input type="text" name="vlrproduto" class="form-control">
+                    </div>
+
+                    <br />
+                    <input type="submit" value="Salvar" class="btn btn-success btn-lg">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

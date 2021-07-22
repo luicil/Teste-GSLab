@@ -1,13 +1,25 @@
-﻿<Properties StartupConfiguration="{FC39D6A3-F0F4-49A7-8500-A330F6F7530E}|Default">
-  <MonoDevelop.Ide.Workbench>
+﻿<Properties StartupConfiguration="{165636CB-600E-4F07-BA7B-0826D9FC674A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProdutoFE/Views/NovoProduto/Index.cshtml">
+    <Files>
+      <File FileName="ProdutoFE/Views/Shared/_Layout.cshtml" Line="22" Column="118" />
+      <File FileName="ProdutoFE/Controllers/NovoProdutoController.cs" Line="15" Column="10" />
+      <File FileName="ProdutoFE/Views/NovoProduto/Index.cshtml" Line="6" Column="39" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Produtos" expanded="True">
-            <Node name="ProdutosFE" expanded="True" selected="True">
+            <Node name="ProdutoAPI" expanded="True">
+              <Node name="Models" expanded="True" />
+            </Node>
+            <Node name="ProdutoFE" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Pages" expanded="True">
-                <Node name="NEProduto.cshtml" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="NovoProduto" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -17,11 +29,13 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.ProdutoAPI PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ProdutoFE PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Volumes/Macintosh HD 2/Projetos/Teste_GSLab/Produtos/ProdutosFE/Controllers/NEProdutoController.cs" relfile="ProdutosFE/Controllers/NEProdutoController.cs" line="21" column="1" />
       <Breakpoint file="/Volumes/Macintosh HD 2/Projetos/Teste_GSLab/Produtos/ProdutosFE/Controllers/NEProdutoController.cs" relfile="ProdutosFE/Controllers/NEProdutoController.cs" line="16" column="1" />
+      <Breakpoint file="/Volumes/Macintosh HD 2/Projetos/Teste_GSLab/Produtos/ProdutoFE/Controllers/NovoProdutoController.cs" relfile="ProdutoFE/Controllers/NovoProdutoController.cs" line="16" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
