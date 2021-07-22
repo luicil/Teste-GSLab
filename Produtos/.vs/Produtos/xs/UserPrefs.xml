@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{FC39D6A3-F0F4-49A7-8500-A330F6F7530E}|Default">
+  <MonoDevelop.Ide.ItemProperties.ProdutosFE PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Produtos" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ProdutoAPI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <AuthorInfo Name="Luicil Fernandes" Email="luicilfernandes@hotmail.com" Copyright="(C) Luicil Fernandes" Company="Teste C# Full Stack Developer" Trademark="GS Lab" />
+</Properties>

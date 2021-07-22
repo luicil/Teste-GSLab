@@ -1,0 +1,22 @@
+docker run -p 3306:3306 --name=mysql1 -d mysql/mysql-server
+
+docker exec -it mysql1 mysql -uroot -p
+tR+P604rw;7L/J4kOf_#=ki28+Z8Y:Ir
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'root1234';
+
+update mysql.user set host = '%' where user='root';
+
+
+docker restart mysql1
+
+
+docker tag bc6f376d3598 mysql/testegslab-luicil
+
+docker save -o /Users/luicilfernandes/Downloads/mysqldockergslab.tar mysql/mysql-server
+
+docker save -o "/Volumes/Macintosh HD 2/Projetos/Teste_GSLab/docker_images/mysqldockergslab_luicil.tar" mysql/testegslab-luicil
+
+docker load -i /Users/luicilfernandes/Downloads/mysqldockergslab.tar
+
+docker load -i "/Volumes/Macintosh HD 2/Projetos/Teste_GSLab/docker_images/mysqldockergslab_luicil.tar"
