@@ -9216,7 +9216,7 @@
       "outputPath": "/Volumes/Macintosh HD 2/Projetos/Teste_GSLab/Produtos/ProdutoAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/luicilfernandes/.config/NuGet/NuGet.Config"
+        "/Users/luicilfernandes/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
