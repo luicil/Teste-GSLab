@@ -32,8 +32,13 @@ namespace ProdutoFE.Controllers
             return View();
         }
 
+        public IActionResult Editar(ProdutoModel produto)
+        {
+            return View("index", produto);
+        }
 
-        public IActionResult Salvar(string nomeproduto, string descrproduto, string vlrproduto)
+
+        public IActionResult Salvar(string nomeproduto, string descrproduto, string vlrproduto, string id)
         {
 
             if (nomeproduto != null && descrproduto != null && vlrproduto != null)
@@ -45,28 +50,40 @@ namespace ProdutoFE.Controllers
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("text/plain"));
 
+                ProdutoModel produto = new ProdutoModel();
+                produto.Nome = nomeproduto;
+                produto.Descricao = descrproduto;
+                produto.Valor = Convert.ToDecimal(vlrproduto);
+                if(id != null)
+                    produto.Id = Convert.ToInt32(id);
 
-                ProdutoModel product = new ProdutoModel
+                string errMsg = "";
+                HttpResponseMessage httpResponse = null;
+                var content = JsonConvert.SerializeObject(produto);
+
+                if(id == null)
                 {
-                    Nome = nomeproduto,
-                    Valor = Convert.ToDecimal(vlrproduto),
-                    Descricao = descrproduto
-                };
-
-
-                var content = JsonConvert.SerializeObject(product);
-                var httpResponse = client.PostAsync("api/Produtos", new StringContent(content, Encoding.Default, "application/json")).Result;
+                    httpResponse = client.PostAsync("api/Produtos", new StringContent(content, Encoding.Default, "application/json")).Result;
+                    errMsg = "Não foi possível incluir o produto";
+                }
+                else
+                {
+                    httpResponse = client.PutAsync("api/Produtos/" + id, new StringContent(content, Encoding.Default, "application/json")).Result;
+                    errMsg = "Não foi possível alterar o produto";
+                }
                 if (!httpResponse.IsSuccessStatusCode)
                 {
-                    ViewBag.error = "Não foi possível incluir o produto";
+                    ViewBag.error = errMsg;
+                    return View();
                 }
             }
             else
             {
                 ViewBag.error = "Informe todos os dados";
+                return View();
             }
 
-            RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Home");
 
         }
     }

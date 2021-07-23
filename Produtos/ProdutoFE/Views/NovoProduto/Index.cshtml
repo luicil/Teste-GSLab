@@ -1,6 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+
+@using Microsoft.AspNetCore.Http;
+
+@model ProdutoModel;
+
 <div class="container">
     <div class="card">
         <div class="card-header">
@@ -19,32 +24,82 @@
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
                 <script type="text/javascript">$(document).ready(function () {
 
-                                    window.setTimeout(function () {
-                                        $(".alert").fadeTo(1000, 0).slideUp(1000, function () {
-                                            $(this).remove();
-                                        });
-                                    }, 3000);
+                        window.setTimeout(function () {
+                            $(".alert").fadeTo(1000, 0).slideUp(1000, function () {
+                                $(this).remove();
+                            });
+                        }, 3000);
 
-                                });</script>
+                    });</script>
             }
         }
+
+        @{
+            if (Model != null)
+            {
+                <label for="exampleFormControlInput1" class="form-label">@Model.Descricao</label>
+            }
+            else
+            {
+                <label for="exampleFormControlInput1" class="form-label">Sem model</label>
+            }
+        }
+
+
+
 
         <div class="card-body">
             <div class="container-fluid">
                 <form method="post" asp-controller="NovoProduto" asp-action="Salvar">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Nome do Produto:</label>
-                        <input type="text" name="nomeproduto" required class="form-control">
+                        @{
+                            if (Model != null)
+                            {
+                                <input type="text" name="nomeproduto" value="@Model.Nome" required class="form-control">
+                            }
+                            else
+                            {
+                                <input type="text" name="nomeproduto" required class="form-control">
+                            }
+                        }
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Descrição do Produto:</label>
-                        <input type="text" name="descrproduto" required class="form-control">
+                        @{
+                            if (Model != null)
+                            {
+                                <input type="text" name="descrproduto" value="@Model.Descricao" required class="form-control">
+                            }
+                            else
+                            {
+                                <input type="text" name="descrproduto" required class="form-control">
+                            }
+                        }
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Valor do Produto:</label>
-                        <input type="number" min="0" name="vlrproduto" required class="form-control">
+                        @{
+                            if (Model != null)
+                            {
+                                <input type="number" min="0" name="vlrproduto" value="@Model.Valor" required class="form-control">
+                            }
+                            else
+                            {
+                                <input type="number" min="0" name="vlrproduto" required class="form-control">
+                            }
+                        }
                     </div>
-                        <input type="hidden" name="id" />
+                    @{
+                        if (Model != null)
+                        {
+                            <input type="hidden" value="@Model.Id" name="id" />
+                        }
+                        else
+                        {
+                            <input type="hidden" name="id" />
+                        }
+                    }
                     <br />
                     <input type="submit" value="Salvar" class="btn btn-success btn-lg">
                 </form>
