@@ -61,4 +61,6 @@ O teste é composto por dois aplicativos:
           docker container create -p 41779:41779 --name produtofe -e APIUrl="http://172.17.0.3:5000" produtofe/testegslab-luicil
   
   
-
+Utilizando as imagens Docker
+  
+  
