@@ -22,3 +22,5 @@ docker load -i /Users/luicilfernandes/Downloads/mysqldockergslab.tar
 docker load -i "/Volumes/Macintosh HD 2/Projetos/Teste_GSLab/docker_images/mysqldockergslab_luicil.tar"
 
 docker save -o "/Users/luicilfernandes/Downloads/produtoapitestegslab_luicil.tar" produtoapi/testegslab-luicil
+
+

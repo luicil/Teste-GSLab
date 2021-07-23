@@ -8,22 +8,43 @@
                 <h1 class="display-4">Novo Produto</h1>
             </div>
         </div>
+
+        @{
+            if (@ViewBag.error != null)
+            {
+                <br />
+                <div class="alert alert-danger" role="alert" id="success-alert">
+                    @ViewBag.error
+                </div>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                <script type="text/javascript">$(document).ready(function () {
+
+                                    window.setTimeout(function () {
+                                        $(".alert").fadeTo(1000, 0).slideUp(1000, function () {
+                                            $(this).remove();
+                                        });
+                                    }, 3000);
+
+                                });</script>
+            }
+        }
+
         <div class="card-body">
             <div class="container-fluid">
                 <form method="post" asp-controller="NovoProduto" asp-action="Salvar">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Nome do Produto:</label>
-                        <input type="text" name="nomeproduto" class="form-control">
+                        <input type="text" name="nomeproduto" required class="form-control">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Descrição do Produto:</label>
-                        <input type="text" name="descproduto" class="form-control">
+                        <input type="text" name="descrproduto" required class="form-control">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Valor do Produto:</label>
-                        <input type="text" name="vlrproduto" class="form-control">
+                        <input type="number" min="0" name="vlrproduto" required class="form-control">
                     </div>
-
+                        <input type="hidden" name="id" />
                     <br />
                     <input type="submit" value="Salvar" class="btn btn-success btn-lg">
                 </form>
