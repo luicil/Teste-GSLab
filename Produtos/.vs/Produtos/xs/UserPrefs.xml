@@ -1,10 +1,13 @@
 ﻿<Properties StartupConfiguration="{165636CB-600E-4F07-BA7B-0826D9FC674A}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProdutoFE/Dockerfile">
+    <Files>
+      <File FileName="ProdutoFE/Dockerfile" Line="2" Column="3" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Produtos" expanded="True">
-            <Node name="ProdutoAPI" selected="True" />
+            <Node name="ProdutoFE" expanded="True" selected="True" />
           </Node>
         </State>
       </Pad>
