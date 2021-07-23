@@ -30,10 +30,35 @@ O teste é composto por dois aplicativos:
           DBPASSWORD = Senha para acesso ao servidor MySQL
                   
       Conteiner:
-        É possível criar containers para serem executados no Docker permitindo escalar a aplicação através do comando: docker container create,
+        É possível criar containers para serem executados no Docker permitindo escalar a API, através do comando: docker container create,
         veja um exemplo:
           docker container create -p 5000:5000 --name produtoapi -e DBHOST="172.17.0.2" produtoapi/testegslab-luicil
       
   
   
-  ProdutoFE: é um aplicativo web que expõe um frontend para a edição dos dados da tabela hipotética de produtos do desafio através do consumo da API
+    ProdutoFE:
+      É um aplicativo web que expõe um frontend para a edição dos dados da tabela hipotética de produtos do desafio
+      através do consumo da API ProdutoAPI.
+      Porta:
+        O aplicativo utiliza a porta: 41779 para comunicação.
+
+      Conteinerização com Docker:
+        Imagem:
+          É possível criar uma imagem DOCKER do aplicativo, para isso basta compilar o projeto e publicar utilizando a opção
+          Publish to Folder do próprio VisualStudio (certifique-se que a publicação está na pasta: bin/Release/net5.0/publish,
+          dentro da pasta do projeto.
+          Após a publicação do projeto basta abrir o terminal, ir para a pasta onde está o projeto e executar o comando do docker:
+          docker build -t <nome-da-imagem-docker> -f Dockerfile . (<== o ponto é necessário no comando), substitua <nome-da-imagem-docker>
+          pelo nome da imagem para o docker.
+
+      Variáveis de Ambiente:
+        O aplicativo expõe uma variável de ambiente para informar o endereço IP e porta para o consumo da API ProdutoAPI.
+        ** Estas variáveis são utilizadas para a crição de conteiners e uso com o docker.
+  
+        Conteiner:
+        É possível criar containers para serem executados no Docker permitindo escalar a aplicação através do comando: docker container create,
+        veja um exemplo:
+          docker container create -p 41779:41779 --name produtofe -e APIUrl="http://172.17.0.3:5000" produtofe/testegslab-luicil
+  
+  
+
