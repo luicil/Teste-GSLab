@@ -70,3 +70,14 @@ Utilizando as imagens Docker
   
   Criando as imagens:
     baixe os arquivos para uma pasta temporária.
+    Abra um terminal e execute os comandos para criar as imagens:
+    docker load -i <caminho_da_imagem>/mysqldockergslab_luicil.tar (cria a imagem do MySQL)
+    docker load -i <caminho_da_imagem>/produtofetestegslab_luicil.tar (cria a imagem do app ProdutoFE)
+    docker load -i <caminho_da_imagem>/produtoapitestegslab_luicil.tar (cria a imagem da API ProdutoAPI)
+  
+  Criando os containers:
+    Siga a sequência para criar os containers:
+      
+  
+  
+  
