@@ -2,6 +2,7 @@
 Teste C# Fullstack Developer para a GSLab
 
 Olá, fiz este desafio baseado no teste C# Fullstack developer para a GSLab.
+Utilizei os templates do próprio VisualStudio para a criação dos projetos. Antes de executar os projetos restaure os pacotes do Nuget.
 
 O teste é composto por dois aplicativos:
   ProdutoAPI:
@@ -62,5 +63,10 @@ O teste é composto por dois aplicativos:
   
   
 Utilizando as imagens Docker
+  Neste endereço: https://1drv.ms/u/s!Al9iK2qfxcmG0hMkuY2Qn-JAgTpA?e=1n0IbI estão armazenadas as imagens para uso com o Docker. As imagens são:
+  mysqldockergslab_luicil.tar = imagem docker do MySQL
+  produtofetestegslab_luicil.tar = aplicativo web frontend (consome a API ProdutoAPI)
+  produtoapitestegslab_luicil.tar = API para manipulação de dados
   
-  
+  Criando as imagens:
+    baixe os arquivos para uma pasta temporária.
