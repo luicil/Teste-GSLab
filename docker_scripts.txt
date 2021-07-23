@@ -10,6 +10,7 @@ update mysql.user set host = '%' where user='root';
 
 docker restart mysql1
 
+docker inspect mynginx | grep IPAddress
 
 docker tag bc6f376d3598 mysql/testegslab-luicil
 

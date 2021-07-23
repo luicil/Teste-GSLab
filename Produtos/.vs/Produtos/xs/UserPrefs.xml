@@ -1,27 +1,10 @@
 ﻿<Properties StartupConfiguration="{165636CB-600E-4F07-BA7B-0826D9FC674A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProdutoFE/Controllers/HomeController.cs">
-    <Files>
-      <File FileName="ProdutoFE/Views/NovoProduto/Index.cshtml" Line="97" Column="26" />
-      <File FileName="ProdutoFE/Controllers/NovoProdutoController.cs" Line="41" Column="107" />
-      <File FileName="ProdutoFE/Controllers/HomeController.cs" Line="25" Column="9" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Produtos" expanded="True">
-            <Node name="ProdutoAPI" expanded="True">
-              <Node name="Controllers" expanded="True" />
-            </Node>
-            <Node name="ProdutoFE" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="HomeController.cs" selected="True" />
-              </Node>
-              <Node name="Models" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
-                <Node name="NovoProduto" expanded="True" />
-              </Node>
-            </Node>
+            <Node name="ProdutoAPI" selected="True" />
           </Node>
         </State>
       </Pad>

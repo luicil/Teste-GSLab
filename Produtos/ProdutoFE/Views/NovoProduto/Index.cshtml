@@ -10,7 +10,17 @@
     <div class="card">
         <div class="card-header">
             <div class="text-center">
-                <h1 class="display-4">Novo Produto</h1>
+                @{
+                    if (Model != null)
+                    {
+                        <h1 class="display-4">Editar Produto</h1>
+                    }
+                    else
+                    {
+                        <h1 class="display-4">Novo Produto</h1>
+                    }
+                }
+
             </div>
         </div>
 
@@ -33,20 +43,6 @@
                     });</script>
             }
         }
-
-        @{
-            if (Model != null)
-            {
-                <label for="exampleFormControlInput1" class="form-label">@Model.Descricao</label>
-            }
-            else
-            {
-                <label for="exampleFormControlInput1" class="form-label">Sem model</label>
-            }
-        }
-
-
-
 
         <div class="card-body">
             <div class="container-fluid">
@@ -80,13 +76,15 @@
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Valor do Produto:</label>
                         @{
+
                             if (Model != null)
                             {
-                                <input type="number" min="0" name="vlrproduto" value="@Model.Valor" required class="form-control">
+                                string vlr = string.Format("{0:N}", Model.Valor);
+                                <input type="number" name="vlrproduto" value="@vlr" required class="form-control">
                             }
                             else
                             {
-                                <input type="number" min="0" name="vlrproduto" required class="form-control">
+                                <input type="number" step="0.1" name="vlrproduto" required class="form-control floatNumber">
                             }
                         }
                     </div>
