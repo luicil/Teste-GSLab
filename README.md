@@ -75,8 +75,31 @@ Utilizando as imagens Docker
     docker load -i <caminho_da_imagem>/produtofetestegslab_luicil.tar (cria a imagem do app ProdutoFE)
     docker load -i <caminho_da_imagem>/produtoapitestegslab_luicil.tar (cria a imagem da API ProdutoAPI)
   
-  Criando os containers:
-    Siga a sequência para criar os containers:
+  Criando os containers executando e identificando os IPs:
+    Siga a sequência para criar os containers, abra o terminal:
+      Crie o container para o servidor MySQL:
+        execute o comando: docker container create -p 3306:3306 --name mysql1  mysql/testegslab-luicil
+      Execute o container mysql1 (este conteiner tem como usuário configurado: root e senha: root1234)
+      Identifique o IP do container mysql1:
+        execute o comando: docker inspect mysql1 | grep IPAddress, anote o endereço IP, será necessário para a criação do conteiner da API
+      Crie o container para a API ProdutoAPI:
+        docker container create -p 5000:5000 --name produtoapi -e DBHOST="<IP_DO_MYSQL>" produtoapi/testegslab-luicil, onde <IP_DO_MYSQL> é
+        o endereço IP que você anotou do container do MySQL.
+        Execute o container do ProdutoAPI.
+        Identifique o IP da API:
+          execute o comando: docker inspect produtoapi | grep IPAddress, anote o endereço IP, será necessário para a criação do conteiner do app
+      Crie o container do APP ProdutoFE:
+          docker container create -p 41779:41779 --name produtofe -e APIUrl="http:/<IP_DA_API>:5000" produtofe/testegslab-luicil, onde
+          <IP_DA_API> é o endereço IP do ProdutoAPI que você anotou.
+      Execute o container do ProdutoFE
+            
+      PRONTO ! Tudo funcionando, basta acessar do seu browser o endereço: http://localhost:41779
+            
+  
+          
+      
+  
+  
       
   
   
